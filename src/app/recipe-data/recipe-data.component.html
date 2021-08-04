@@ -1,0 +1,16 @@
+<p>recipe detail</p>
+<div *ngIf= "recipe">
+    <h2>{{recipe?.name}}</h2>
+    <p>{{recipe?.feature}}</p>
+    <table>
+        <tr>
+            <td>
+                <img width="200" src = "/assets/img/pict{{recipe?.id}}.png">
+            </td>
+            <td>
+                <b>cooking time: </b>{{recipe?.minute}}minute<br><br>
+            </td>
+        </tr>
+    </table>
+</div>
+<button (click) = "backToList()">back to list</button>
