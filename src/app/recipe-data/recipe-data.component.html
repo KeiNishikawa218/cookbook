@@ -9,6 +9,12 @@
             </td>
             <td>
                 <b>cooking time: </b>{{recipe?.minute}}minute<br><br>
+                <b>ingredient(for {{recipe?.serve}} people)</b>
+                <ul>
+                    <li *ngFor="let item of recipe.ingre">
+                        {{item.name}} &nbsp; {{item.amount}}
+                    </li>
+                </ul>
             </td>
         </tr>
     </table>
