@@ -1,10 +1,13 @@
 <h2> recipe search system</h2>
+<p>search:</p>
+<input #keyword size = "20" [value]=getCurrentValue()>
+<button (click)="searchRecipe(keyword.value)">Search</button>
 <table>
     <tr>
         <th>name</th>
         <th>time</th>
         <th>one point</th>
-        <th>ingredient</th>
+        <th>main ingredient</th>
     </tr>
     <tr *ngFor="let recipe of recipedata">
         <td><a routerLink="/recipe-data/{{recipe.id}}">{{recipe.name}}</a></td>
